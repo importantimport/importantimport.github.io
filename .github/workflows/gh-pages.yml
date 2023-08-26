@@ -1,0 +1,14 @@
+name: GitHub Pages
+
+on:
+  push:
+    paths:
+      - src/**
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
+    with:
+      cname: ii.kwaa.dev
+      publish_dir: dist
